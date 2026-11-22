@@ -113,12 +113,17 @@ footer {
     font-size: 22px;
 }
 
-/* FAQ answers - hidden until clicked */
+/* FAQ Answers - Hidden until clicked */
 .faq-answer {
-    display: none;
+    display: none !important;
     padding: 15px;
     background-color: #e5e5e5;
     color: #333;
     text-align: left;
+}
+
+/* Show answer only when question is active */
+.faq-question.active + .faq-answer {
+    display: block !important;
 }
 
