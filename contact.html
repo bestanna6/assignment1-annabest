@@ -1,8 +1,9 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>Contact - Workout Club</title>
+    <title>Contact - Workout Club</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,12 +25,11 @@
     <section>
         <h2>Get Involved</h2>
         <p>
-            Ready to become part of our Workout Club? New members are always welcome! 
-            Join us for instructor-led classes, virtual workout plans, cardio and weight 
-            training, and other fitness activities. Whether you are just getting started 
-            or already have fitness experience, our club is a place to stay active, meet 
+            Ready to become part of our Workout Club? New members are always welcome!
+            Join us for instructor-led classes, virtual workout plans, cardio and weight
+            training, and other fitness activities. Whether you are just getting started
+            or already have fitness experience, our club is a place to stay active, meet
             new people, and work toward your goals.
-
         </p>
     </section>
 
@@ -37,23 +37,41 @@
         <h2>Contact Information</h2>
 
         <h3>workoutclub@gmail.com</h3>
-        <p>
-        </p>
 
         <h3>Location</h3>
-        <p>
-            West Side Gym
-        </p>
+        <p>West Side Gym</p>
     </section>
 
     <section>
         <h2>Questions?</h2>
         <p>
-            Have a question about the Workout Club, our classes, or membership? We are happy to help! 
-            Reach out to us for more information about our workouts, activities, schedules, or how to 
+            Have a question about the Workout Club, our classes, or membership? We are happy to help!
+            Reach out to us for more information about our workouts, activities, schedules, or how to
             get started. We look forward to hearing from you and helping you become part of our fitness community.
-
         </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and let us know how we can help!</p>
+
+        <form id="contactForm">
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" placeholder="Type your message here"></textarea><br><br>
+
+            <button type="submit">Submit Message</button>
+
+            <p id="formMessage"></p>
+
+        </form>
     </section>
 
 </main>
@@ -61,6 +79,38 @@
 <footer>
     <p>© 2026 My Workout Club</p>
 </footer>
+
+<!-- JavaScript for Contact Form -->
+<script>
+
+    const form = document.querySelector("#contactForm");
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.querySelector("#name").value.trim();
+        const email = document.querySelector("#email").value.trim();
+        const message = document.querySelector("#message").value.trim();
+        const formMessage = document.querySelector("#formMessage");
+
+        if (name === "" || email === "" || message === "") {
+
+            formMessage.textContent = "Please fill out all fields before submitting.";
+            formMessage.style.color = "red";
+
+        } else {
+
+            formMessage.textContent = "Thank you, " + name + "! Your message has been received.";
+            formMessage.style.color = "green";
+
+            form.reset();
+
+        }
+
+    });
+
+</script>
 
 </body>
 </html>
