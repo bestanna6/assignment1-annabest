@@ -70,15 +70,11 @@ footer {
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* FAQ Section */
-.faq-section {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 30px;
-}
 
+/* FAQ Section */
 .faq-container {
     width: 100%;
+    max-width: 700px;
     margin: 20px auto;
 }
 
@@ -86,11 +82,10 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Clickable FAQ question boxes */
 .faq-question {
     width: 100%;
     padding: 15px;
-    background-color: #333;
+    background-color: #222;
     color: white;
     border: none;
     text-align: left;
@@ -98,32 +93,20 @@ footer {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .faq-question:hover {
     background-color: #555;
 }
 
-.faq-question.active {
-    background-color: #555;
-}
-
-.faq-question span {
-    font-size: 22px;
-}
-
-/* FAQ Answers - Hidden until clicked */
 .faq-answer {
     display: none !important;
     padding: 15px;
     background-color: #e5e5e5;
-    color: #333;
+    color: #222;
     text-align: left;
 }
 
-/* Show answer only when question is active */
-.faq-question.active + .faq-answer {
+.faq-item.active .faq-answer {
     display: block !important;
 }
-
