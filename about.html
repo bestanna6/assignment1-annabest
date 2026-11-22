@@ -53,11 +53,11 @@
         </p>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ SECTION -->
     <section class="faq-section">
 
         <h2>Frequently Asked Questions</h2>
-        <p>Have questions? Click below to learn more about our gym!</p>
+        <p>Click on a question below to see the answer.</p>
 
         <div class="faq-container">
 
@@ -67,8 +67,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Our gym is open Monday through Friday from 5 AM to 10 PM
-                    and Saturday and Sunday from 7 AM to 8 PM.</p>
+                    Our gym is open Monday through Friday from 5 AM to 10 PM
+                    and Saturday and Sunday from 7 AM to 8 PM.
                 </div>
             </div>
 
@@ -78,8 +78,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>We offer monthly and yearly membership options to fit
-                    different schedules and fitness goals.</p>
+                    We offer monthly and yearly membership options to fit
+                    different schedules and fitness goals.
                 </div>
             </div>
 
@@ -89,8 +89,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes! Members can work with a personal trainer for
-                    guidance, workout plans, and help reaching their fitness goals.</p>
+                    Yes! Members can work with a personal trainer for guidance,
+                    workout plans, and help reaching their fitness goals.
                 </div>
             </div>
 
@@ -100,8 +100,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes! We offer instructor-led group classes for different
-                    fitness levels, including cardio, strength training, and more.</p>
+                    Yes! We offer instructor-led group classes for different
+                    fitness levels, including cardio and strength training.
                 </div>
             </div>
 
@@ -111,8 +111,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Absolutely! Our gym welcomes people of all fitness levels.
-                    We want everyone to feel comfortable starting their fitness journey.</p>
+                    Absolutely! Our gym welcomes people of all fitness levels.
+                    We want everyone to feel comfortable starting their fitness journey.
                 </div>
             </div>
 
@@ -122,8 +122,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>No! We provide exercise equipment, weights, and cardio
-                    machines for our members to use.</p>
+                    No! We provide exercise equipment, weights, and cardio
+                    machines for our members to use.
                 </div>
             </div>
 
@@ -133,8 +133,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes! Contact us to ask about trying out the gym before
-                    choosing a membership.</p>
+                    Yes! Contact us to ask about trying out the gym before
+                    choosing a membership.
                 </div>
             </div>
 
@@ -144,8 +144,8 @@
                     <span>+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Bring comfortable workout clothes, athletic shoes,
-                    a water bottle, and a positive attitude!</p>
+                    Bring comfortable workout clothes, athletic shoes,
+                    a water bottle, and a positive attitude!
                 </div>
             </div>
 
@@ -167,15 +167,20 @@
 
         question.addEventListener("click", function() {
 
-            this.classList.toggle("active");
-
             const answer = this.nextElementSibling;
+            const wasOpen = answer.style.display === "block";
 
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                this.querySelector("span").textContent = "+";
-            } else {
+            // Close all answers
+            questions.forEach(function(item) {
+                item.nextElementSibling.style.display = "none";
+                item.classList.remove("active");
+                item.querySelector("span").textContent = "+";
+            });
+
+            // Open the clicked answer if it was previously closed
+            if (!wasOpen) {
                 answer.style.display = "block";
+                this.classList.add("active");
                 this.querySelector("span").textContent = "-";
             }
 
