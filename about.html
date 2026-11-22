@@ -160,37 +160,30 @@
 </footer>
 
 <!-- FAQ JavaScript -->
+
 <script>
+    const questions = document.querySelectorAll(".faq-question");
 
-    const faqItems = document.querySelectorAll(".faq-item");
-
-    faqItems.forEach(function(item) {
-
-        const question = item.querySelector(".faq-question");
-
+    questions.forEach(function(question) {
         question.addEventListener("click", function() {
 
-            // Check if this question is already open
-            const wasOpen = item.classList.contains("active");
+            const answer = this.nextElementSibling;
+            const isOpen = answer.classList.contains("show");
 
-            // Close all questions
-            faqItems.forEach(function(faq) {
-                faq.classList.remove("active");
-                faq.querySelector("span").textContent = "+";
+            // Close all answers
+            document.querySelectorAll(".faq-answer").forEach(function(item) {
+                item.classList.remove("show");
             });
 
-            // Open the clicked question if it was closed
-            if (!wasOpen) {
-                item.classList.toggle("active");
-                question.querySelector("span").textContent = "-";
+            document.querySelectorAll(".faq-question span").forEach(function(icon) {
+                icon.textContent = "+";
+            });
+
+            // Open the clicked answer
+            if (!isOpen) {
+                answer.classList.add("show");
+                this.querySelector("span").textContent = "-";
             }
-
         });
-
     });
-
 </script>
-
-</body>
-</html>
-
