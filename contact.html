@@ -58,14 +58,14 @@
 
         <form id="contactForm">
 
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" placeholder="Enter your name"><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" placeholder="Enter your email"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" placeholder="Type your message here"></textarea><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Type your message here"></textarea>
 
             <button type="submit">Submit Message</button>
 
@@ -80,7 +80,7 @@
     <p>© 2026 My Workout Club</p>
 </footer>
 
-<!-- JavaScript for Contact Form -->
+<!-- Contact Form JavaScript -->
 <script>
 
     const form = document.querySelector("#contactForm");
@@ -92,11 +92,17 @@
         const name = document.querySelector("#name").value.trim();
         const email = document.querySelector("#email").value.trim();
         const message = document.querySelector("#message").value.trim();
+
         const formMessage = document.querySelector("#formMessage");
 
         if (name === "" || email === "" || message === "") {
 
             formMessage.textContent = "Please fill out all fields before submitting.";
+            formMessage.style.color = "red";
+
+        } else if (!email.includes("@") || !email.includes(".")) {
+
+            formMessage.textContent = "Please enter a valid email address.";
             formMessage.style.color = "red";
 
         } else {
