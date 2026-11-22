@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 
@@ -161,27 +162,27 @@
 <!-- FAQ JavaScript -->
 <script>
 
-    const questions = document.querySelectorAll(".faq-question");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    questions.forEach(function(question) {
+    faqItems.forEach(function(item) {
+
+        const question = item.querySelector(".faq-question");
 
         question.addEventListener("click", function() {
 
-            const answer = this.nextElementSibling;
-            const wasOpen = answer.style.display === "block";
+            // Check if this question is already open
+            const wasOpen = item.classList.contains("active");
 
-            // Close all answers
-            questions.forEach(function(item) {
-                item.nextElementSibling.style.display = "none";
-                item.classList.remove("active");
-                item.querySelector("span").textContent = "+";
+            // Close all questions
+            faqItems.forEach(function(faq) {
+                faq.classList.remove("active");
+                faq.querySelector("span").textContent = "+";
             });
 
-            // Open the clicked answer if it was previously closed
+            // Open the clicked question if it was closed
             if (!wasOpen) {
-                answer.style.display = "block";
-                this.classList.add("active");
-                this.querySelector("span").textContent = "-";
+                item.classList.toggle("active");
+                question.querySelector("span").textContent = "-";
             }
 
         });
@@ -192,3 +193,4 @@
 
 </body>
 </html>
+
