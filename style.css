@@ -1,3 +1,4 @@
+
 /* General page styling */
 body {
     margin: 0;
@@ -60,4 +61,105 @@ footer {
     text-align: center;
     padding: 20px;
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #555;
+}
+
+.faq-question span {
+    font-size: 22px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Motivational Message Button */
+#motivationButton {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#motivationButton:hover {
+    background-color: #555;
+}
+
+#motivationMessage {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
 }
