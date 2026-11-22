@@ -25,7 +25,15 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    background-color: #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -39,11 +47,10 @@ nav a {
 /* Navigation hover effect */
 nav a:hover {
     background-color: #555;
-    color: white;
     border-radius: 5px;
 }
 
-/* Main content */
+/* Centered main content using Flexbox */
 main {
     min-height: 70vh;
     display: flex;
@@ -52,19 +59,6 @@ main {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-}
-
-/* Page sections */
-section {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 30px;
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Footer */
@@ -92,7 +86,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* FAQ Questions */
+/* Clickable FAQ question boxes */
 .faq-question {
     width: 100%;
     padding: 15px;
@@ -111,11 +105,15 @@ footer {
     background-color: #555;
 }
 
+.faq-question.active {
+    background-color: #555;
+}
+
 .faq-question span {
     font-size: 22px;
 }
 
-/* FAQ Answers */
+/* FAQ answers - hidden until clicked */
 .faq-answer {
     display: none;
     padding: 15px;
@@ -124,64 +122,3 @@ footer {
     text-align: left;
 }
 
-.faq-answer p {
-    margin: 0;
-}
-
-/* Contact Form */
-form {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-}
-
-form textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-/* Form and motivational buttons */
-form button,
-#motivationButton {
-    background-color: #333;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-form button:hover,
-#motivationButton:hover {
-    background-color: #555;
-}
-
-/* Contact form message */
-#formMessage {
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* Motivational Message */
-#motivationMessage {
-    font-weight: bold;
-    margin-top: 15px;
-    font-size: 18px;
-}
