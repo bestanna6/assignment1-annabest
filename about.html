@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -24,34 +25,130 @@
     <section>
         <h2>Who We Are</h2>
         <p>
-           Our goal is to help members stay active, build healthy habits, and feel more confident 
-            in their fitness journey. Members can participate in a variety of instructor-led classes, 
-            virtual workout plans, cardio exercises, and weight training. Our club also encourages 
-            members to support and motivate each other while working toward their individual fitness 
-            goals. We want to create a welcoming environment where everyone feels comfortable staying 
+            Our goal is to help members stay active, build healthy habits, and feel more confident
+            in their fitness journey. Members can participate in a variety of instructor-led classes,
+            virtual workout plans, cardio exercises, and weight training. Our club also encourages
+            members to support and motivate each other while working toward their individual fitness
+            goals. We want to create a welcoming environment where everyone feels comfortable staying
             active and becoming healthier.
-
+        </p>
     </section>
 
     <section>
         <h2>Our Goals</h2>
         <p>
-            Our club's goal is to help members stay active, improve their overall health, and build 
-            healthy habits. We want to create a positive and supportive environment where members can 
+            Our club's goal is to help members stay active, improve their overall health, and build
+            healthy habits. We want to create a positive and supportive environment where members can
             stay motivated, work toward their fitness goals, and enjoy being active.
-
         </p>
     </section>
 
     <section>
         <h2>Our Community</h2>
         <p>
-            Our club provides members with opportunities to meet new people, participate in group workouts 
-            and fitness activities, and encourage each other along the way. We want to create a welcoming 
-            community where members can make connections, stay motivated, and support one another as they 
+            Our club provides members with opportunities to meet new people, participate in group workouts
+            and fitness activities, and encourage each other along the way. We want to create a welcoming
+            community where members can make connections, stay motivated, and support one another as they
             work toward their fitness goals.
-
         </p>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <p>Have questions? Click below to learn more about our gym!</p>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What are your gym hours?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Our gym is open Monday through Friday from 5 AM to 10 PM
+                    and Saturday and Sunday from 7 AM to 8 PM.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What membership plans do you offer?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer monthly and yearly membership options to fit
+                    different schedules and fitness goals.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer personal training?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Members can work with a personal trainer for
+                    guidance, workout plans, and help reaching their fitness goals.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer group fitness classes?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! We offer instructor-led group classes for different
+                    fitness levels, including cardio, strength training, and more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can beginners join the gym?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely! Our gym welcomes people of all fitness levels.
+                    We want everyone to feel comfortable starting their fitness journey.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need to bring my own equipment?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No! We provide exercise equipment, weights, and cardio
+                    machines for our members to use.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer a free trial?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Contact us to ask about trying out the gym before
+                    choosing a membership.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What should I bring for my first workout?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Bring comfortable workout clothes, athletic shoes,
+                    a water bottle, and a positive attitude!</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 </main>
@@ -59,6 +156,29 @@
 <footer>
     <p>© 2026 My Workout Club</p>
 </footer>
+
+<!-- JavaScript for FAQ -->
+<script>
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(function(question) {
+        question.addEventListener("click", function() {
+
+            this.classList.toggle("active");
+
+            const answer = this.nextElementSibling;
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                this.querySelector("span").textContent = "+";
+            } else {
+                answer.style.display = "block";
+                this.querySelector("span").textContent = "-";
+            }
+
+        });
+    });
+</script>
 
 </body>
 </html>
