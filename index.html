@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>My Workout Club</title>
     <link rel="stylesheet" href="style.css">
@@ -28,21 +26,11 @@
             This website will provide information about our Workout Club,
             including workouts, fitness goals, and club activities.
         </p>
-
+        
         <img src="https://recessfitnessclub.com/wp-content/uploads/2026/04/best-gym-workouts-1776119957.png"
-             alt="People working out in a gym"
-             width="500">
-
-    </section>
-
-    <!-- Motivational Message Section -->
-    <section>
-        <h2>Need Some Motivation?</h2>
-        <p>Click the button below for a little workout motivation!</p>
-
-        <button id="motivationButton">Get Motivation</button>
-
-        <p id="motivationMessage"></p>
+         alt="People working out in a gym"
+         width="500">
+        
     </section>
 
 </main>
@@ -50,31 +38,6 @@
 <footer>
     <p>© 2026 My Workout Club</p>
 </footer>
-
-<!-- Motivational Message JavaScript -->
-<script>
-
-    const messages = [
-        "Believe in yourself and keep pushing!",
-        "Every workout brings you one step closer to your goals!",
-        "Progress takes time. Don't give up!",
-        "You are stronger than you think!",
-        "Make today count. Your future self will thank you!",
-        "Small steps lead to big results!"
-    ];
-
-    const button = document.querySelector("#motivationButton");
-
-    button.addEventListener("click", function() {
-
-        const randomNumber = Math.floor(Math.random() * messages.length);
-
-        document.querySelector("#motivationMessage").textContent =
-            messages[randomNumber];
-
-    });
-
-</script>
 
 </body>
 </html>
