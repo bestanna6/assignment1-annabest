@@ -1,3 +1,98 @@
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Sticky header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #222;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background-color: #ddd;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Page sections */
+section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.faq-container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+/* FAQ Questions */
 .faq-question {
     width: 100%;
     padding: 15px;
@@ -9,11 +104,84 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+.faq-question:hover {
+    background-color: #555;
+}
+
+.faq-question span {
+    font-size: 22px;
+}
+
+/* FAQ Answers */
 .faq-answer {
     display: none;
     padding: 15px;
-    background-color: #f1f1f1;
+    background-color: #e5e5e5;
     color: #333;
+    text-align: left;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Form and motivational buttons */
+form button,
+#motivationButton {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover,
+#motivationButton:hover {
+    background-color: #555;
+}
+
+/* Contact form message */
+#formMessage {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Motivational Message */
+#motivationMessage {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
 }
