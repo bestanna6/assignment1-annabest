@@ -71,6 +71,7 @@ footer {
 }
 
 
+
 /* FAQ Section */
 .faq-container {
     width: 100%;
@@ -93,6 +94,7 @@ footer {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .faq-question:hover {
@@ -100,12 +102,18 @@ footer {
 }
 
 .faq-answer {
-    display: none !important;
+    display: none;
     padding: 15px;
     background-color: #e5e5e5;
     color: #222;
     text-align: left;
 }
+
+/* Show answer when question is clicked */
+.faq-answer.show {
+    display: block;
+}
+
 
 .faq-item.active .faq-answer {
     display: block !important;
