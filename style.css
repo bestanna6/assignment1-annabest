@@ -1,3 +1,4 @@
+
 /* General page styling */
 body {
     margin: 0;
@@ -19,6 +20,12 @@ header {
 }
 
 /* Navigation menu */
+nav {
+    text-align: center;
+    padding: 15px;
+    background-color: #ddd;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -39,10 +46,11 @@ nav a {
 /* Navigation hover effect */
 nav a:hover {
     background-color: #555;
+    color: white;
     border-radius: 5px;
 }
 
-/* Centered main content using Flexbox */
+/* Main content */
 main {
     min-height: 70vh;
     display: flex;
@@ -53,6 +61,104 @@ main {
     padding: 40px 20px;
 }
 
+/* Section styling */
+section {
+    max-width: 850px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* FAQ Section */
+.faq {
+    text-align: center;
+    padding: 30px;
+}
+
+.faq h2 {
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+.faq-question {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.faq-question:hover {
+    background-color: #555;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #eeeeee;
+    color: #333;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* Contact form styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    min-height: 120px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Contact form message */
+#formMessage {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
 /* Footer */
 footer {
     background-color: #222;
@@ -61,4 +167,3 @@ footer {
     padding: 20px;
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
 }
-
