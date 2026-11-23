@@ -70,9 +70,13 @@ footer {
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 /* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .faq-container {
     width: 100%;
     max-width: 700px;
@@ -109,12 +113,7 @@ footer {
     text-align: left;
 }
 
-/* Show answer when question is clicked */
+/* Display answer when clicked */
 .faq-answer.show {
     display: block;
-}
-
-
-.faq-item.active .faq-answer {
-    display: block !important;
 }
